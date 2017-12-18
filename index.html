@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Text Editor Clone</title>
+   <link rel="shortcut icon" href="https://image.freepik.com/free-icon/edit-text-document-interface-button_318-31874.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+ <body>
+       <header id = "main">
+    <h1>Text Editor</h1>
+  </header>
+  <div class  = "icon-bar">
+
+  <header>
+    <ul>
+    <div class = "btn-group">
+    <li><a href = "#" id = "italics"  class = "btn-btn-default"onclick = "set('italic')"><i class = "fa-fa-bars">I</i></a></li>
+    <li><a href = "#" id = "bold" class = "btn-btn-default" onclick = "set('bold')"><b>B</b></a></li>
+    <li><a href = "#" id = "underline" class = "btn-btn-default" onclick = "set('underline')"><b>U</b></a></li>
+    <li><a href = "#" id = "strikeThrough" class = "btn-btn-default" onclick = "set('strikeThrough')"><span class = "strike">S</span></a></li>
+    
+      </a></li>
+    <li><a href="#"  class = "btn-btn-default"onclick = "set('subscript')"><b><i class="fa fa-subscript" aria-hidden="true"></i></li>
+    <li><a href="#" class = "btn-btn-default" onclick = "set('superscript')"><i class="fa fa-superscript" aria-hidden="true"></i></a></li>
+  </div>
+
+  </ul>
+  <ul>
+
+    <li><a class = "btn-btn-default" href = "#" id = "number" onclick = "set('insertOrderedList')"><i class="fa fa-list-ol" aria-hidden="true"></i></a></li>
+    <li><a href = "#" id = "bullet" class = "btn-btn-default" onclick = "set('insertUnorderedList')"><i class="fa fa-list-ul" aria-hidden="true"></i>
+   	<li><a class = "btn-btn-default" href = "#"><input type = "color" id = "color" onchange = "setHighlight()"></a></li>
+   
+   	<li><a class = "btn-btn-default" href = "#" id = "undo" onclick = "set('undo')"><i class="fa fa-undo" aria-hidden="true"></i></a></li>
+    <li><a class = "btn-btn-default" href="#" onclick = "set('justifyRight')"><i class="fa fa-align-right" title="Align Right"></i></a></li>
+      <li><a href="#" onclick = "set('justifyCenter')"><i class="fa fa-align-center" title="Align Center"></i></a></li>
+    <li><a class = "btn-btn-default" href="#" onclick = "set('justifyLeft')"><i class="fa fa-align-left" title="Align Left"></i></a></li>
+
+   	<li><a class = "btn-btn-default" href = "#" id = "redo" onclick = "set('redo')"><i class="fa fa-repeat" aria-hidden="true"></i></a></li>
+    <li><a class = "btn-btn-default" href = "#" id = "image" onclick = "setImage()"><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+    
+    <li><a href = "#"><input type="number" min = "1" max = "7" id = "font_size" onchange = "setFontSize()" placeholder = "Font"></a></li>
+      
+    <li id = "family"><a href = "#">
+      <select id = "font_family" onchange = "changeFont()">
+       <option value = "Arial">Arial</option>
+       <option value = "Times New Roman">Times</option>
+       <option value = "Verdana">Verdana</option>
+       <option value = "Helvetica">Helvetica</option>
+       <option value = "Georgia">Georgia</option>
+       <option value = "Comic Sans MS">Comic</option>
+      
+      </select></a></li>
+    </ul>
+    </div>
+
+  
+   </header>
+   <div id = "box">
+  
+   <iframe id = "editor" name = "editor" style = "height:800; width: 1100;"placeholder = "Type away !"></iframe>
+ </div>
+ <script type="text/javascript" src = "script.js"></script>
+ </body>
+</html>
